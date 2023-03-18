@@ -1,0 +1,9 @@
+開発環境起動
+イメージ作成
+docker build -t chatgpt-linebot-image .
+コンテナ起動
+ホストの$(pwd)ディレクトリとコンテナ内の/workspaceディレクトリを共有
+
+docker run -it --rm --name chatgpt-linebot -v "$(pwd)":/workspace chatgpt-linebot-image
+
+
